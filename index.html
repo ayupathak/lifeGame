@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Conway's Game of Life</h1>
+    <div id="grid-container"></div>
+    <div class="controls" id="controls">
+        <button id="start-stop" class="btn">Start</button>
+        <button id="randomize" class="btn">Randomize</button>
+        <button id="clear" class="btn">Clear</button>
+        <button id="show-instructions" class="btn">Show Instructions</button>
+    </div>
+
+    <!-- Instructions Modal -->
+    <div id="instructions-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Instructions</h2>
+            <p>Welcome to Conway's Game of Life!</p>
+            <ul>
+                <li><b>Start/Stop:</b> Toggle the simulation on and off.</li>
+                <li><b>Randomize:</b> Generate a random initial state.</li>
+                <li><b>Clear:</b> Clear the grid.</li>
+                <li><b>Grid Cells:</b> Click on the cells to toggle their state between alive and dead.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
