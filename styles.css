@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 20x 0;
+    font-size: 1.5em;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    gap: 1px;
+    background-color: #34495e;
+    padding: 5px;
+    border-radius: 5px;
+    width: 90vmin;
+    height: 90vmin;
+}
+
+.cell {
+    width: 92%;
+    height: 92%;
+    background-color: #2c3e50;
+    border: 1px solid #34495e;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cell.alive {
+    background-color: #f1c40f;
+    transform: scale(1.1);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #ecf0f1;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #2c3e50;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
